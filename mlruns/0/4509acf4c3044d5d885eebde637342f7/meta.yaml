@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/elois/Documents/Openclassrooms/Projet_7/mlruns/0/4509acf4c3044d5d885eebde637342f7/artifacts
+end_time: 1694609700579
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4509acf4c3044d5d885eebde637342f7
+run_name: adorable-penguin-382
+run_uuid: 4509acf4c3044d5d885eebde637342f7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1694609700557
+status: 4
+tags: []
+user_id: elois

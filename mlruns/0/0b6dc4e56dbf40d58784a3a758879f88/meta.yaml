@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/elois/Documents/Openclassrooms/Projet_7/mlruns/0/0b6dc4e56dbf40d58784a3a758879f88/artifacts
+end_time: 1694609292982
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0b6dc4e56dbf40d58784a3a758879f88
+run_name: adventurous-bird-644
+run_uuid: 0b6dc4e56dbf40d58784a3a758879f88
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1694609292958
+status: 4
+tags: []
+user_id: elois
