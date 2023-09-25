@@ -1,0 +1,11 @@
+Flask
+Gunicorn
+request
+jsonify
+joblib
+pandas
+mlflow
+MlflowClient
+streamlit
+numpy
+shap
