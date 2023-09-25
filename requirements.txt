@@ -1,8 +1,8 @@
 Flask
 Gunicorn
-request
-jsonify
-joblib
+Request
+Jsonify
+Joblib
 pandas
 mlflow
 MlflowClient
