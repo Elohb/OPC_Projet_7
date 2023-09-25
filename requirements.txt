@@ -1,3 +1,5 @@
 Flask
 Gunicorn
-Joblib
+joblib
+pandas
+numpy
