@@ -1,11 +1,2 @@
 Flask
 Gunicorn
-Request
-Jsonify
-Joblib
-pandas
-mlflow
-MlflowClient
-streamlit
-numpy
-shap
