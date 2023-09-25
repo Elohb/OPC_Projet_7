@@ -109,6 +109,9 @@ def get_client_features(sk_id):
 
 @app.route('/get_dataframe', methods=['GET'])
 def get_dataframe():
+    """
+    Downloads the dataframe for further use
+    """
     try:
         # Convert the DataFrame to JSON format
         dataframe_json = df.to_json(orient='records')
