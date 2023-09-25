@@ -1,19 +1,20 @@
 from flask import Flask, request, jsonify
 import joblib
 import pandas as pd
-import mlflow
-from mlflow.tracking import MlflowClient
-import streamlit as st
+#import mlflow
+#from mlflow.tracking import MlflowClient
+#import streamlit as st
 import numpy as np
-import shap
 
-mlflow.set_tracking_uri("http://127.0.0.1:5000")  
+#mlflow.set_tracking_uri("http://127.0.0.1:5000")  
 
 app = Flask(__name__)
 
 # Load the trained model using MLflow
-model_uri = 'runs:/faedb810e8e04b7295946d14b1b36949/models/XGBoost_best_model.joblib' 
-loaded_model = mlflow.sklearn.load_model(model_uri)
+#model_uri = 'runs:/faedb810e8e04b7295946d14b1b36949/models/XGBoost_best_model.joblib' 
+#loaded_model = mlflow.sklearn.load_model(model_uri)
+
+loaded_model = joblib.load('model.pkl')
 
 # Load the entire dataframe
 df = pd.read_csv('df_sample2.csv')
