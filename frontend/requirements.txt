@@ -1,6 +1,7 @@
 Flask
 Gunicorn
 joblib
+pickle
 pandas
 numpy
 xgboost
