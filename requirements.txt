@@ -5,6 +5,6 @@ pandas
 numpy
 imbalanced-learn
 shap
-scikit-learn==1.2.2
-xgboost==1.3.1
+scikit-learn
+xgboost
 smote
