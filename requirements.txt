@@ -3,6 +3,6 @@ Gunicorn
 joblib
 pandas
 numpy
-xgboost
+xgboost==1.2.2
 imbalanced-learn
 shap
