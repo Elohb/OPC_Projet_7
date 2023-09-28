@@ -1,0 +1,7 @@
+Flask
+Gunicorn
+joblib
+pandas
+numpy
+xgboost
+shap
