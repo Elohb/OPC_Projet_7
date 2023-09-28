@@ -17,8 +17,6 @@ with open('model.pkl', 'rb')as f:
 # Load the entire dataframe
 df = pd.read_csv('df_sample2.csv')
 
-# Load feature details dataframe 
-df_details = pd.read_csv('Detail_features.csv', encoding='Windows-1252')
 
 # Extract all feature names 
 feature_names = list(df.columns)
