@@ -56,22 +56,15 @@ def predict_get(sk_id):
     """
     Returns prediction and prediction probabilities for a given client.
     """
-    if str(sk_id) in shap_values_dict:
-        # Get the XGBoost model's prediction and prediction probabilities
-        client_data = df[df['SK_ID_CURR'] == sk_id][feature_names]
-        predict = loaded_pipeline.predict(client_data)[0]
-        predict_proba = loaded_pipeline.predict_proba(client_data)[0]
+    if sk_id in num_client:
+        predict = loaded_model.predict(df[df['SK_ID_CURR']==sk_id])[0]
+        predict_proba = loaded_model.predict_proba(df[df['SK_ID_CURR']==sk_id])[0]
         predict_proba_0 = str(predict_proba[0])
         predict_proba_1 = str(predict_proba[1])
     else:
         predict = predict_proba_0 = predict_proba_1 = "client inconnu"
-
-    return jsonify({
-        'retour_prediction': str(predict),
-        'predict_proba_0': predict_proba_0,
-        'predict_proba_1': predict_proba_1
-    })
-
+    return jsonify({ 'retour_prediction' : str(predict), 'predict_proba_0': predict_proba_0,
+                     'predict_proba_1': predict_proba_1 })
 
 
 @app.route('/get_client_features/<float:sk_id>')
