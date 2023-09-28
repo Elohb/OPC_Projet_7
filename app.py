@@ -5,16 +5,14 @@ import numpy as np
 import pickle
 import xgboost 
 from xgboost import XGBClassifier
-import shap 
+#import shap 
 
 app = Flask(__name__)
 
 #Loading model information
 with open('model.pkl', 'rb')as f:
-    loaded_pipeline = joblib.load(f)
+    loaded_model = joblib.load(f)
 
-# Extract the XGBoost model from the pipeline
-loaded_model = loaded_pipeline.named_steps['model']
 
 # Load the entire dataframe
 df = pd.read_csv('df_sample2.csv')
@@ -76,45 +74,6 @@ def predict_get(sk_id):
         'predict_proba_1': predict_proba_1
     })
 
-## Local feature importance 
-# Create a SHAP explainer for the XGBoost model
-explainer = shap.Explainer(loaded_model)
-
-# Calculate SHAP values for all clients once
-shap_values_dict = {}
-for sk_id in df['SK_ID_CURR'].unique():
-    client_data = df[df['SK_ID_CURR'] == sk_id][feature_names]
-    shap_values = explainer(client_data)
-    shap_values_dict[str(sk_id)] = dict(zip(feature_names, shap_values.values[0]))
-
-
-@app.route('/feature_importance/<float:sk_id>')
-def feature_importance_get(sk_id):
-    """
-    Returns local feature importance (SHAP values) for a given client.
-    """
-    if str(sk_id) in shap_values_dict:
-        shap_dict = shap_values_dict[str(sk_id)]
-        shap_dict = {key: float(value) for key, value in shap_dict.items()}
-    else:
-        shap_dict = {}
-
-    return jsonify({
-        'local_feature_importance': shap_dict
-    })
-
-
-@app.route('/get_details', methods=['GET'])
-def get_details():
-    """
-    Downloads the feature details dataframe for further use
-    """
-    try:
-        # Convert the DataFrame to JSON format
-        dataframe_json = df_details.to_json(orient='records')
-        return jsonify(dataframe_json)
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
 
 
 @app.route('/get_client_features/<float:sk_id>')
