@@ -1,0 +1,11 @@
+Flask
+Gunicorn
+joblib
+pandas
+numpy
+imbalanced-learn
+shap
+scikit-learn
+xgboost
+smote
+plotly
