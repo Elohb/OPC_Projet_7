@@ -3,5 +3,9 @@ Gunicorn
 joblib
 pandas
 numpy
-xgboost
+imbalanced-learn
 shap
+scikit-learn
+xgboost
+smote
+plotly

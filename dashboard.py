@@ -3,7 +3,8 @@ import requests
 import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
-
+import streamlit.components.v1 as components
+import base64
 
 
 # Set Streamlit page configuration
