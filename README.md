@@ -10,7 +10,7 @@ Objectifs du projet :
 3. Mettre en production le modèle de scoring de prédiction à l’aide d’une API, ainsi que le dashboard interactif qui appelle l’API pour les prédictions.
 
 Fichiers : 
-XGBoost_model : Données du modèle XGBoost Classifier final
-backend : API et dashboard tests + données csv, pkl et png utilisées pour leur développement 
-frontend : API et dashboard complets +  données csv, pkl et png utilisées pour leur fonctionnement
-main : API et dashboard utilisés pour le déploiement (sans feature importance locales) + données csv, pkl et png utilisées pour leur déploiement sur Heroku et streamlit 
+- XGBoost_model : Données du modèle XGBoost Classifier final
+- backend : API et dashboard tests + Notebook prétraitement data, données csv, pkl et png utilisées pour leur développement 
+- frontend : API et dashboard complets + Notebook prétraitement data, données csv, pkl et png utilisées pour leur fonctionnement
+- main : API et dashboard utilisés pour le déploiement (sans feature importance locales) + Notebook prétraitement data, données csv, pkl et png utilisées pour leur déploiement sur Heroku et streamlit 
