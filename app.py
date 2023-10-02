@@ -15,7 +15,7 @@ with open('model.pkl', 'rb')as f:
 
 
 # Load the entire dataframe
-df = pd.read_csv('df_sample2.csv')
+df = pd.read_csv('df_sample3.csv')
 
 
 # Extract all feature names 
